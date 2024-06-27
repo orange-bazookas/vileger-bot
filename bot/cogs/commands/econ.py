@@ -204,7 +204,13 @@ class Econ(commands.Cog):
             name=ctx.l.econ.pp.pick,
             value=f"{self.d.emojis[self.d.emoji_items[pickaxe]]} {pickaxe}",
         )
-
+        
+        hoe = await self.db.fetch_hoe(user.id)
+        embed.add_field(
+            name=ctx.l.econ.pp.hoe,
+            value=f"{self.d.emojis[self.d.emoji_items[hoe]]} {hoe}",
+        )
+        
         sword = await self.db.fetch_sword(user.id)
         embed.add_field(
             name=ctx.l.econ.pp.sword,
